@@ -1,5 +1,8 @@
 (function(){
 	var api_version = Nervous.getJSAPIVersion();
+
+	Nervous.getHWAPIVersion();
+
 	var matrix = [[1,2,5],[3,5,-1],[7,-3,5]];
 	var ev = JSON.stringify(numeric.eig(matrix));
 
