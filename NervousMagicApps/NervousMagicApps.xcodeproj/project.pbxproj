@@ -27,6 +27,8 @@
 		1FF696D11C25612F005CCF6E /* String+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696AA1C25612F005CCF6E /* String+Misc.swift */; settings = {ASSET_TAGS = (); }; };
 		1FF696D21C25612F005CCF6E /* Swifter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696AB1C25612F005CCF6E /* Swifter.podspec */; settings = {ASSET_TAGS = (); }; };
 		1FF696EA1C256582005CCF6E /* localServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696E91C256582005CCF6E /* localServer.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF6986D1C25B3D6005CCF6E /* acc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6986C1C25B3D5005CCF6E /* acc.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF6986F1C25B3EC005CCF6E /* gyr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6986E1C25B3EC005CCF6E /* gyr.swift */; settings = {ASSET_TAGS = (); }; };
 		22657E8A1C2554FD0025B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E891C2554FD0025B1E0 /* AppDelegate.swift */; };
 		22657E8C1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E8B1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift */; };
 		22657E931C2554FD0025B1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22657E921C2554FD0025B1E0 /* Assets.xcassets */; };
@@ -92,6 +94,8 @@
 		1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Swifter.xcodeproj; sourceTree = "<group>"; };
 		1FF696B01C25612F005CCF6E /* SwifteriOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwifteriOS.h; sourceTree = "<group>"; };
 		1FF696E91C256582005CCF6E /* localServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localServer.swift; sourceTree = "<group>"; };
+		1FF6986C1C25B3D5005CCF6E /* acc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acc.swift; sourceTree = "<group>"; };
+		1FF6986E1C25B3EC005CCF6E /* gyr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gyr.swift; sourceTree = "<group>"; };
 		22657E861C2554FD0025B1E0 /* NervousMagicApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NervousMagicApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22657E891C2554FD0025B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22657E8B1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAppStoreTableViewController.swift; sourceTree = "<group>"; };
@@ -195,9 +199,19 @@
 			name = Server;
 			sourceTree = "<group>";
 		};
+		1FF698671C25B3B2005CCF6E /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6986C1C25B3D5005CCF6E /* acc.swift */,
+				1FF6986E1C25B3EC005CCF6E /* gyr.swift */,
+			);
+			name = Sensors;
+			sourceTree = "<group>";
+		};
 		22657E7D1C2554FD0025B1E0 = {
 			isa = PBXGroup;
 			children = (
+				1FF698671C25B3B2005CCF6E /* Sensors */,
 				1FF696941C25612F005CCF6E /* swifter */,
 				1FF696E81C25654C005CCF6E /* Server */,
 				22657E881C2554FD0025B1E0 /* NervousMagicApps */,
@@ -351,6 +365,7 @@
 				1FF696CC1C25612F005CCF6E /* HttpResponse.swift in Sources */,
 				1FF696CA1C25612F005CCF6E /* HttpParser.swift in Sources */,
 				1FF696CE1C25612F005CCF6E /* HttpServer.swift in Sources */,
+				1FF6986F1C25B3EC005CCF6E /* gyr.swift in Sources */,
 				1FF696C81C25612F005CCF6E /* DemoServer.swift in Sources */,
 				1FF696CD1C25612F005CCF6E /* HttpRouter.swift in Sources */,
 				22657E8A1C2554FD0025B1E0 /* AppDelegate.swift in Sources */,
@@ -359,6 +374,7 @@
 				1FF696D11C25612F005CCF6E /* String+Misc.swift in Sources */,
 				1FF696CF1C25612F005CCF6E /* HttpServerIO.swift in Sources */,
 				22DF55071C25C40500AA5B52 /* SwiftyJSON.swift in Sources */,
+				1FF6986D1C25B3D6005CCF6E /* acc.swift in Sources */,
 				1FF696C91C25612F005CCF6E /* HttpHandlers.swift in Sources */,
 				22657E8C1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift in Sources */,
 				2273366F1C2573690028C5F0 /* JSAppViewController.swift in Sources */,
