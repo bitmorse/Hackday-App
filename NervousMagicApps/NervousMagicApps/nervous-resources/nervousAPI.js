@@ -62,8 +62,12 @@ Nervous.prototype.getJSAPIVersion = function() {
 	return this.JSAPIVersion;
 };
 
-
-
+Nervous.prototype.getHWAPIVersion = function() {
+	$.getJSON("/nervous-api/version", function( data ) {
+		return data;
+	});
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 
 
