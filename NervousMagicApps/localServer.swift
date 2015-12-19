@@ -40,7 +40,7 @@ public func localServer(publicDir: String?) -> HttpServer {
         
         
         
-        return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method: \(r.method)</h3><h3>Headers:</h3>\(headersInfo)<h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>\(pathParamsInfo)"))
+        return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method: \(r.method)</h3><h3>Headers:</h3><h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>"))
     }
     
     server.GET["/upload"] = { r in
