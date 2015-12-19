@@ -17,14 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let server = localServer(NSBundle.mainBundle().resourcePath)
         do {
-            try server.start()
+            try self.server.start()
             print("Server Started Successfully!")
         } catch {
             print("Server start error: \(error)")
         }
-        self.server = server
+        
+        //let jsonObject: String = "{" + "\"ID\"" + ":" + (NSString(format: "%d", 10) as String) + "," + "\"Class\"" + ":" + (NSString(format: "%d", 3) as String) + "}"
+        self.server["/json"] = { request in
+            let jsonObject: NSDictionary = [NSString(string: "foo"): NSNumber(int: 3), NSString(string: "bar"): NSString(string: "baz")]
+            return .OK(.Json(jsonObject))
+        }
 
         return true
     }
