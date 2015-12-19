@@ -16,16 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="dOj-b8-gfh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-sL-XRn">
-                                <rect key="frame" x="240" y="350" width="120" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Open Test JSApp"/>
-                                <connections>
-                                    <segue destination="QNd-8j-hRi" kind="presentation" id="239-M8-IgX"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -54,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEn-3P-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-400" y="2047"/>
+            <point key="canvasLocation" x="1268" y="961"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HPX-tw-DFb">
@@ -75,17 +65,17 @@
             </objects>
             <point key="canvasLocation" x="-384" y="228"/>
         </scene>
-        <!--Table View Controller-->
+        <!--App Store Table View Controller-->
         <scene sceneID="i1N-pc-U41">
             <objects>
-                <tableViewController id="oWh-cy-YUG" sceneMemberID="viewController">
+                <tableViewController id="oWh-cy-YUG" customClass="JSAppStoreTableViewController" customModule="NervousMagicApps" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Few-Zo-17D">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nOw-e6-9Ay">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="appstoreCell" id="nOw-e6-9Ay">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nOw-e6-9Ay" id="HLM-Cd-3AC">
@@ -102,15 +92,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="W3Z-HV-lTn"/>
+                    <connections>
+                        <segue destination="QNd-8j-hRi" kind="presentation" identifier="JSAppSegue" id="JOx-3p-8RP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAu-ey-UmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1268" y="228"/>
         </scene>
-        <!--JSAppStoreViewController-->
+        <!--Nervous Apps-->
         <scene sceneID="E88-y2-nVc">
             <objects>
-                <navigationController title="JSAppStoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="XAd-LP-VYV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XAd-LP-VYV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nervous Apps" id="pPn-P1-bKF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tO8-6n-OOY">

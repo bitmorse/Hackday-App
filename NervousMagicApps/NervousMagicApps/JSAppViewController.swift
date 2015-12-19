@@ -14,12 +14,15 @@ class JSAppViewController: UIViewController {
     
     
     @IBOutlet weak var JSAppWebView: UIWebView!
-    //Webviewcontroller scheme calls
+    var JSAppName = "nil";
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         //hide status bar
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade);
     }
+   
     
     
     override func viewDidLoad() {
@@ -28,14 +31,20 @@ class JSAppViewController: UIViewController {
         
        
         //test webview
-        let url = NSURL(string: "http://localhost:8080/nervous-jsapps/hello-world/app.html");
+        //let url = NSURL(string: "http://localhost:8080/nervous-jsapps/hello-world/app.html");
         //let url = NSURL(string: "http://localhost:8080/nervous-api/gyr/getGyr");
+    
+        //webview
+        let url = NSURL(string: "http://localhost:8080/nervous-jsapps/\(JSAppName)/app.html");
+        
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
         JSAppWebView.scrollView.bounces = false;
-        
-        
+    
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
