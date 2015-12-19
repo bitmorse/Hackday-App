@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var server = HttpServer()
     let manager = CMMotionManager()
     
-    var jsnsense: String = ""
+    var jsnsense: NSDictionary = [NSString(string: "version"): NSNumber(double: 1.0)]
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -84,10 +84,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     print("There was an error: \(error)")
                                     return
                                 }
-                                let ax = "\"x\"" + ":" + (NSString(format: "%f", data!.acceleration.x) as String)
-                                let ay = "\"y\"" + ":" + (NSString(format: "%f", data!.acceleration.y) as String)
-                                let az = "\"z\"" + ":" + (NSString(format: "%f", data!.acceleration.z) as String)
-                                self.jsnsense = "{" + ax + "," + ay + "," + az + "}"
+                                //let ax = "\"x\"" + ":" + (NSString(format: "%f", data!.acceleration.x) as String)
+                                //let ay = "\"y\"" + ":" + (NSString(format: "%f", data!.acceleration.y) as String)
+                                //let az = "\"z\"" + ":" + (NSString(format: "%f", data!.acceleration.z) as String)
+                                //self.jsnsense = "{" + ax + "," + ay + "," + az + "}"
+                                self.jsnsense = [NSString(string: "x"): NSNumber(double: data!.acceleration.x), NSString(string: "y"): NSNumber(double: data!.acceleration.y),NSString(string: "z"): NSNumber(double: data!.acceleration.z)]
                                 //print(self.jsnsense)
                                 self.manager.stopAccelerometerUpdates()
                             }
@@ -105,10 +106,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     print("There was an error: \(error)")
                                     return
                                 }
-                                let gx = "\"x\"" + ":" + (NSString(format: "%f", data!.rotationRate.x) as String)
-                                let gy = "\"y\"" + ":" + (NSString(format: "%f", data!.rotationRate.y) as String)
-                                let gz = "\"z\"" + ":" + (NSString(format: "%f", data!.rotationRate.z) as String)
-                                self.jsnsense = "{" + gx + "," + gy + "," + gz + "}"
+                                //let gx = "\"x\"" + ":" + (NSString(format: "%f", data!.rotationRate.x) as String)
+                                //let gy = "\"y\"" + ":" + (NSString(format: "%f", data!.rotationRate.y) as String)
+                                //let gz = "\"z\"" + ":" + (NSString(format: "%f", data!.rotationRate.z) as String)
+                                //self.jsnsense = "{" + gx + "," + gy + "," + gz + "}"
+                                self.jsnsense = [NSString(string: "x"): NSNumber(double: data!.rotationRate.x), NSString(string: "y"): NSNumber(double: data!.rotationRate.y),NSString(string: "z"): NSNumber(double: data!.rotationRate.z)]
                                 //print(self.jsnsense)
                                 self.manager.stopGyroUpdates()
                                 
@@ -118,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 default:
-                    self.jsnsense = "{" + "\"version\"" + ":" + (NSString(format: "%d", 1) as String) + "}"
+                    self.jsnsense = [NSString(string: "version"): NSNumber(double: 1.0)]
             }
             
             print(self.jsnsense)
