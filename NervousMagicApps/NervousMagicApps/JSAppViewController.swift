@@ -31,6 +31,7 @@ class JSAppViewController: UIViewController {
         let url = NSURL(string: "http://localhost:8080/json"); //"https://sid027.github.io/Hackday-App/hello-world/app.html");
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
+        JSAppWebView.scrollView.bounces = false;
         
         
     }
