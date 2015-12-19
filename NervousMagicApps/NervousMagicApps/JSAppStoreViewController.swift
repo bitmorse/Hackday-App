@@ -1,14 +1,16 @@
 //
-//  FirstViewController.swift
+//  JSAppStoreViewController
 //  NervousMagicApps
 //
+//  Description: Gets the list of apps from server, displays to user, handles app "open" requests
+
 //  Created by Sam Sulaimanov on 19/12/15.
 //  Copyright © 2015 ethz. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class JSAppStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
