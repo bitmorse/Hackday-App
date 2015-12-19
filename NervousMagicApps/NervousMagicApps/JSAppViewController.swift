@@ -27,11 +27,11 @@ class JSAppViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //test webview
-<<<<<<< HEAD
-        let url = NSURL(string: "http://localhost:8080/api"); //"https://sid027.github.io/Hackday-App/hello-world/app.html");
-=======
+
+        //let url = NSURL(string: "http://localhost:8080/api"); //"https://sid027.github.io/Hackday-App/hello-world/app.html");
+
         let url = NSURL(string: "https://sid027.github.io/Hackday-App/hello-world/app.html");
->>>>>>> 7fd17852f8d844dc1b19808ea61bb8e62af27f5d
+
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
         JSAppWebView.scrollView.bounces = false;
