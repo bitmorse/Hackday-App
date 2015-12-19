@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 
                 case "gyr":
-                    self.manager.gyroUpdateInterval = 0.005
+                    self.manager.gyroUpdateInterval = 0.05
                     self.manager.startGyroUpdates()
                     if method! == "getGyr" {
                         if self.manager.gyroAvailable {
@@ -106,12 +106,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     print("There was an error: \(error)")
                                     return
                                 }
+                                //print(data!.rotationRate.x)
                                 //let gx = "\"x\"" + ":" + (NSString(format: "%f", data!.rotationRate.x) as String)
                                 //let gy = "\"y\"" + ":" + (NSString(format: "%f", data!.rotationRate.y) as String)
                                 //let gz = "\"z\"" + ":" + (NSString(format: "%f", data!.rotationRate.z) as String)
                                 //self.jsnsense = "{" + gx + "," + gy + "," + gz + "}"
                                 self.jsnsense = [NSString(string: "x"): NSNumber(double: data!.rotationRate.x), NSString(string: "y"): NSNumber(double: data!.rotationRate.y),NSString(string: "z"): NSNumber(double: data!.rotationRate.z)]
                                 //print(self.jsnsense)
+                                //self.jsnsense = NSDictionary()
                                 self.manager.stopGyroUpdates()
                                 
                             }
