@@ -125,7 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print(self.jsnsense)
             //return .OK(.Html("<h3>hello:</h3>\(resource!)\(method!)"))
-            return .OK(.Html(self.jsnsense))
+            return .OK(.Json(self.jsnsense))
             //return .OK(.Html("<h3>hello:</h3>\(self.jsnsense)"))
 
         }

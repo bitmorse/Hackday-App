@@ -63,11 +63,14 @@ Nervous.prototype.getJSAPIVersion = function() {
 };
 
 Nervous.prototype.getHWAPIVersion = function() {
-	$.getJSON("/nervous-api/version", function( data ) {
-		return data;
-	});
+	return $.getJSON("/nervous-api/version");
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      
+
+Nervous.prototype.getGyr = function() {
+	return $.getJSON("/nervous-api/gyr/getGyr");
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 
 
