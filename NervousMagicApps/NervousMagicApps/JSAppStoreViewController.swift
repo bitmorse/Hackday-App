@@ -11,6 +11,7 @@
 import UIKit
 
 class JSAppStoreViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

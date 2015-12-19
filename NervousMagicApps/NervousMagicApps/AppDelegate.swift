@@ -13,18 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var server = HttpServer?()
-
+    var server = HttpServer()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let server = demoServer(NSBundle.mainBundle().resourcePath)
+        let server = localServer(NSBundle.mainBundle().resourcePath)
         do {
             try server.start()
+            print("Server Started Successfully!")
         } catch {
             print("Server start error: \(error)")
         }
         self.server = server
-        
+
         return true
     }
 
