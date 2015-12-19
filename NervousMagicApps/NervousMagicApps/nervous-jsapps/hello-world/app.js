@@ -15,9 +15,11 @@
 
  	setInterval(function(){
 		$.when(Nervous.getGyr()).done(function(data){
-	    	$('#gyrodata').html("X:" +data.x+" Y:" +data.y+" Z:" +data.z);
+	    	$('#gyrodataX').html("gyr X:" +data.x);
+	    	$('#gyrodataY').html("gyr Y:" +data.x);
+	    	$('#gyrodataZ').html("gyr Z:" +data.x);
 		});
- 	 }, 500);
+ 	 }, 1000);
 
 
 
