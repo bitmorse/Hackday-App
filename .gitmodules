@@ -1,0 +1,4 @@
+[submodule "NervousMagicApps/swifter"]
+	path = NervousMagicApps/swifter
+	url = git@github.com:glock45/swifter.git
+	branch = master

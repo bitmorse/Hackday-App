@@ -16,6 +16,16 @@
                     <view key="view" contentMode="scaleToFill" id="dOj-b8-gfh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-sL-XRn">
+                                <rect key="frame" x="240" y="350" width="120" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Open Test JSApp"/>
+                                <connections>
+                                    <segue destination="QNd-8j-hRi" kind="presentation" id="239-M8-IgX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -24,6 +34,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpt-a3-Rlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-384" y="1052"/>
+        </scene>
+        <!--App View Controller-->
+        <scene sceneID="pSX-w7-Kjr">
+            <objects>
+                <viewController id="QNd-8j-hRi" customClass="JSAppViewController" customModule="NervousMagicApps" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QyJ-xu-3rq"/>
+                        <viewControllerLayoutGuide type="bottom" id="DXU-Ml-FlL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5OH-qh-5wA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-aO-DNR">
+                                <rect key="frame" x="178" y="238" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="JSAppWebView" destination="Idq-aO-DNR" id="gAT-TH-My9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEn-3P-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="2047"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HPX-tw-DFb">
