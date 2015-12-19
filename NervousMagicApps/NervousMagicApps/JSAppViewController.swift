@@ -18,6 +18,11 @@ class JSAppViewController: UIViewController {
     
     
     
+    
+    @IBAction func closeJSAppButton(sender: AnyObject) {
+         self.dismissViewControllerAnimated(true, completion: {});
+    }
+    
     override func viewWillAppear(animated: Bool) {
         //hide status bar
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade);
