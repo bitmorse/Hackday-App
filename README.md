@@ -11,12 +11,9 @@
 
 
 ### Creating a new app to submit to "store"
-   * create a new directory `your-new-app`
-   * change into that directory and create `app.js` and `app.html`
-   * include 
-       `<script type="text/javascript" src="/nervousAPI.js"></script>`
-    right before the final `</head>` tag.
+   * copy the hello-world app and rename    
    * that's it! now fill you app.js and app.html with beautiful code!
+   * the UI framework is App.js
    * (the Nervous JavaScript API is available under the name `Nervous`)
 
 

@@ -11,4 +11,12 @@
 	$('#my-output').append("the version of the JS nervous api is: " + api_version + '<hr/>');
 
 	$('#my-output').append('we just found some eigenvalues: <pre>'+ev+'</pre>');
+
+
+	//call the UI page "home"
+	App.load('home');
+
+
+
+
 })();
