@@ -39,25 +39,17 @@
         <scene sceneID="pSX-w7-Kjr">
             <objects>
                 <viewController id="QNd-8j-hRi" customClass="JSAppViewController" customModule="NervousMagicApps" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QyJ-xu-3rq"/>
-                        <viewControllerLayoutGuide type="bottom" id="DXU-Ml-FlL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5OH-qh-5wA">
+                    <webView key="view" contentMode="scaleToFill" id="Cyj-UO-fxK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-aO-DNR">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                    </webView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="JSAppWebView" destination="Idq-aO-DNR" id="gAT-TH-My9"/>
+                        <outlet property="JSAppWebView" destination="Cyj-UO-fxK" id="C2e-C1-C39"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEn-3P-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
