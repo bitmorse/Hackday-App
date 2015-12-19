@@ -31,11 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let jsonObject: NSDictionary = [NSString(string: "foo"): NSNumber(int: 3), NSString(string: "bar"): NSString(string: "baz")]
             return .OK(.Json(jsonObject))
         }
+        
+        
         let publicDir = NSBundle.mainBundle().resourcePath;
 
-        let fm = NSFileManager.defaultManager();
-        let p = fm.currentDirectoryPath;
-        print(p);
         
         
         server.GET["/nervous-jsapps/:appname/:resource"] = { r in
@@ -64,8 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        
-        self.server["/api"] = { r in
+        self.server["/nervous-api"] = { r in
             var headersInfo = ""
             for (name, value) in r.headers {
                 headersInfo += "\(name) : \(value)<br>"
