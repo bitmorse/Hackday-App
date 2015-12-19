@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "284C61DEF6E787623023C6DC39AA5B53164DB85B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "284C61DEF6E787623023C6DC39AA5B53164DB85B" : 0,
+    "23E1215747CC507DB66740642919D35CB5B6A43C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DACF96F1-441E-44DC-BE6B-384AF7772E0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "284C61DEF6E787623023C6DC39AA5B53164DB85B" : "Hackday-App\/",
+    "23E1215747CC507DB66740642919D35CB5B6A43C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NervousMagicApps",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NervousMagicApps\/NervousMagicApps.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bitmorse\/beaconhunt.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23E1215747CC507DB66740642919D35CB5B6A43C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sid027\/Hackday-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "284C61DEF6E787623023C6DC39AA5B53164DB85B"
+    }
+  ]
+}

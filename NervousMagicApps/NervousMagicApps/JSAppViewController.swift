@@ -9,6 +9,15 @@
 import UIKit
 
 class JSAppViewController: UIViewController {
+    
+    
+    //Webviewcontroller scheme calls
+    
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
