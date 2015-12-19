@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FF696BF1C25612F005CCF6E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696951C25612F005CCF6E /* .gitignore */; settings = {ASSET_TAGS = (); }; };
+		1FF696C01C25612F005CCF6E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696961C25612F005CCF6E /* .swiftlint.yml */; settings = {ASSET_TAGS = (); }; };
+		1FF696C11C25612F005CCF6E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696971C25612F005CCF6E /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		1FF696C31C25612F005CCF6E /* file.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6969A1C25612F005CCF6E /* file.html */; settings = {ASSET_TAGS = (); }; };
+		1FF696C41C25612F005CCF6E /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6969B1C25612F005CCF6E /* login.html */; settings = {ASSET_TAGS = (); }; };
+		1FF696C51C25612F005CCF6E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6969C1C25612F005CCF6E /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		1FF696C61C25612F005CCF6E /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6969D1C25612F005CCF6E /* test.json */; settings = {ASSET_TAGS = (); }; };
+		1FF696C71C25612F005CCF6E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A01C25612F005CCF6E /* Const.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696C81C25612F005CCF6E /* DemoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A11C25612F005CCF6E /* DemoServer.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696C91C25612F005CCF6E /* HttpHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A21C25612F005CCF6E /* HttpHandlers.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CA1C25612F005CCF6E /* HttpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A31C25612F005CCF6E /* HttpParser.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CB1C25612F005CCF6E /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A41C25612F005CCF6E /* HttpRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CC1C25612F005CCF6E /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A51C25612F005CCF6E /* HttpResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CD1C25612F005CCF6E /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A61C25612F005CCF6E /* HttpRouter.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CE1C25612F005CCF6E /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A71C25612F005CCF6E /* HttpServer.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696CF1C25612F005CCF6E /* HttpServerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A81C25612F005CCF6E /* HttpServerIO.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696D01C25612F005CCF6E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696A91C25612F005CCF6E /* Socket.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696D11C25612F005CCF6E /* String+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696AA1C25612F005CCF6E /* String+Misc.swift */; settings = {ASSET_TAGS = (); }; };
+		1FF696D21C25612F005CCF6E /* Swifter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696AB1C25612F005CCF6E /* Swifter.podspec */; settings = {ASSET_TAGS = (); }; };
+		1FF696EA1C256582005CCF6E /* localServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696E91C256582005CCF6E /* localServer.swift */; settings = {ASSET_TAGS = (); }; };
 		22657E8A1C2554FD0025B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E891C2554FD0025B1E0 /* AppDelegate.swift */; };
 		22657E8C1C2554FD0025B1E0 /* JSAppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */; };
 		22657E8E1C2554FD0025B1E0 /* JSAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E8D1C2554FD0025B1E0 /* JSAppViewController.swift */; };
@@ -15,7 +35,60 @@
 		22657E961C2554FD0025B1E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22657E941C2554FD0025B1E0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1FF696E01C25612F005CCF6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7C839B6E19422CFF003A6950;
+			remoteInfo = SwifterSampleiOS;
+		};
+		1FF696E21C25612F005CCF6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7CA4813B19A2EA8D0030B30D;
+			remoteInfo = SwifterSampleOSX;
+		};
+		1FF696E41C25612F005CCF6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AE893E71C05127900A29F63;
+			remoteInfo = SwifteriOS;
+		};
+		1FF696E61C25612F005CCF6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AE893FB1C0512C400A29F63;
+			remoteInfo = SwifterMac;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1FF696951C25612F005CCF6E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1FF696961C25612F005CCF6E /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		1FF696971C25612F005CCF6E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1FF6969A1C25612F005CCF6E /* file.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = file.html; sourceTree = "<group>"; };
+		1FF6969B1C25612F005CCF6E /* login.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		1FF6969C1C25612F005CCF6E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1FF6969D1C25612F005CCF6E /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		1FF696A01C25612F005CCF6E /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		1FF696A11C25612F005CCF6E /* DemoServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoServer.swift; sourceTree = "<group>"; };
+		1FF696A21C25612F005CCF6E /* HttpHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHandlers.swift; sourceTree = "<group>"; };
+		1FF696A31C25612F005CCF6E /* HttpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpParser.swift; sourceTree = "<group>"; };
+		1FF696A41C25612F005CCF6E /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		1FF696A51C25612F005CCF6E /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		1FF696A61C25612F005CCF6E /* HttpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		1FF696A71C25612F005CCF6E /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
+		1FF696A81C25612F005CCF6E /* HttpServerIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServerIO.swift; sourceTree = "<group>"; };
+		1FF696A91C25612F005CCF6E /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		1FF696AA1C25612F005CCF6E /* String+Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Misc.swift"; sourceTree = "<group>"; };
+		1FF696AB1C25612F005CCF6E /* Swifter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Swifter.podspec; sourceTree = "<group>"; };
+		1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Swifter.xcodeproj; sourceTree = "<group>"; };
+		1FF696B01C25612F005CCF6E /* SwifteriOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwifteriOS.h; sourceTree = "<group>"; };
+		1FF696E91C256582005CCF6E /* localServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localServer.swift; sourceTree = "<group>"; };
 		22657E861C2554FD0025B1E0 /* NervousMagicApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NervousMagicApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22657E891C2554FD0025B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAppStoreViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +110,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FF696941C25612F005CCF6E /* swifter */ = {
+			isa = PBXGroup;
+			children = (
+				1FF696951C25612F005CCF6E /* .gitignore */,
+				1FF696961C25612F005CCF6E /* .swiftlint.yml */,
+				1FF696971C25612F005CCF6E /* LICENSE */,
+				1FF696991C25612F005CCF6E /* Resources */,
+				1FF6969E1C25612F005CCF6E /* Sources */,
+				1FF696AB1C25612F005CCF6E /* Swifter.podspec */,
+				1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */,
+				1FF696AF1C25612F005CCF6E /* SwifteriOS */,
+			);
+			path = swifter;
+			sourceTree = "<group>";
+		};
+		1FF696991C25612F005CCF6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6969A1C25612F005CCF6E /* file.html */,
+				1FF6969B1C25612F005CCF6E /* login.html */,
+				1FF6969C1C25612F005CCF6E /* logo.png */,
+				1FF6969D1C25612F005CCF6E /* test.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1FF6969E1C25612F005CCF6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6969F1C25612F005CCF6E /* Swifter */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1FF6969F1C25612F005CCF6E /* Swifter */ = {
+			isa = PBXGroup;
+			children = (
+				1FF696A01C25612F005CCF6E /* Const.swift */,
+				1FF696A11C25612F005CCF6E /* DemoServer.swift */,
+				1FF696A21C25612F005CCF6E /* HttpHandlers.swift */,
+				1FF696A31C25612F005CCF6E /* HttpParser.swift */,
+				1FF696A41C25612F005CCF6E /* HttpRequest.swift */,
+				1FF696A51C25612F005CCF6E /* HttpResponse.swift */,
+				1FF696A61C25612F005CCF6E /* HttpRouter.swift */,
+				1FF696A71C25612F005CCF6E /* HttpServer.swift */,
+				1FF696A81C25612F005CCF6E /* HttpServerIO.swift */,
+				1FF696A91C25612F005CCF6E /* Socket.swift */,
+				1FF696AA1C25612F005CCF6E /* String+Misc.swift */,
+			);
+			path = Swifter;
+			sourceTree = "<group>";
+		};
+		1FF696AD1C25612F005CCF6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FF696E11C25612F005CCF6E /* SwifterSampleiOS.app */,
+				1FF696E31C25612F005CCF6E /* SwifterSampleOSX */,
+				1FF696E51C25612F005CCF6E /* Swifter.framework */,
+				1FF696E71C25612F005CCF6E /* Swifter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FF696AF1C25612F005CCF6E /* SwifteriOS */ = {
+			isa = PBXGroup;
+			children = (
+				1FF696B01C25612F005CCF6E /* SwifteriOS.h */,
+			);
+			path = SwifteriOS;
+			sourceTree = "<group>";
+		};
+		1FF696E81C25654C005CCF6E /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				1FF696E91C256582005CCF6E /* localServer.swift */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
 		22657E7D1C2554FD0025B1E0 = {
 			isa = PBXGroup;
 			children = (
+				1FF696941C25612F005CCF6E /* swifter */,
+				1FF696E81C25654C005CCF6E /* Server */,
 				22657E881C2554FD0025B1E0 /* NervousMagicApps */,
 				22657E871C2554FD0025B1E0 /* Products */,
 			);
@@ -112,6 +266,12 @@
 			mainGroup = 22657E7D1C2554FD0025B1E0;
 			productRefGroup = 22657E871C2554FD0025B1E0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1FF696AD1C25612F005CCF6E /* Products */;
+					ProjectRef = 1FF696AC1C25612F005CCF6E /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				22657E851C2554FD0025B1E0 /* NervousMagicApps */,
@@ -119,13 +279,52 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		1FF696E11C25612F005CCF6E /* SwifterSampleiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterSampleiOS.app;
+			remoteRef = 1FF696E01C25612F005CCF6E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FF696E31C25612F005CCF6E /* SwifterSampleOSX */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = SwifterSampleOSX;
+			remoteRef = 1FF696E21C25612F005CCF6E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FF696E51C25612F005CCF6E /* Swifter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Swifter.framework;
+			remoteRef = 1FF696E41C25612F005CCF6E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FF696E71C25612F005CCF6E /* Swifter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Swifter.framework;
+			remoteRef = 1FF696E61C25612F005CCF6E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		22657E841C2554FD0025B1E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF696C31C25612F005CCF6E /* file.html in Resources */,
+				1FF696C11C25612F005CCF6E /* LICENSE in Resources */,
+				1FF696C51C25612F005CCF6E /* logo.png in Resources */,
+				1FF696C01C25612F005CCF6E /* .swiftlint.yml in Resources */,
+				1FF696BF1C25612F005CCF6E /* .gitignore in Resources */,
 				22657E961C2554FD0025B1E0 /* LaunchScreen.storyboard in Resources */,
 				22657E931C2554FD0025B1E0 /* Assets.xcassets in Resources */,
+				1FF696C61C25612F005CCF6E /* test.json in Resources */,
+				1FF696D21C25612F005CCF6E /* Swifter.podspec in Resources */,
+				1FF696C41C25612F005CCF6E /* login.html in Resources */,
 				22657E911C2554FD0025B1E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,9 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF696EA1C256582005CCF6E /* localServer.swift in Sources */,
+				1FF696CC1C25612F005CCF6E /* HttpResponse.swift in Sources */,
+				1FF696CA1C25612F005CCF6E /* HttpParser.swift in Sources */,
+				1FF696CE1C25612F005CCF6E /* HttpServer.swift in Sources */,
+				1FF696C81C25612F005CCF6E /* DemoServer.swift in Sources */,
+				1FF696CD1C25612F005CCF6E /* HttpRouter.swift in Sources */,
 				22657E8E1C2554FD0025B1E0 /* JSAppViewController.swift in Sources */,
 				22657E8A1C2554FD0025B1E0 /* AppDelegate.swift in Sources */,
+				1FF696D01C25612F005CCF6E /* Socket.swift in Sources */,
+				1FF696CB1C25612F005CCF6E /* HttpRequest.swift in Sources */,
+				1FF696D11C25612F005CCF6E /* String+Misc.swift in Sources */,
+				1FF696CF1C25612F005CCF6E /* HttpServerIO.swift in Sources */,
+				1FF696C91C25612F005CCF6E /* HttpHandlers.swift in Sources */,
 				22657E8C1C2554FD0025B1E0 /* JSAppStoreViewController.swift in Sources */,
+				1FF696C71C25612F005CCF6E /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
