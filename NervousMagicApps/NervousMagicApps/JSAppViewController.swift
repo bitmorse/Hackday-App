@@ -14,28 +14,32 @@ class JSAppViewController: UIViewController {
     
     
     @IBOutlet weak var JSAppWebView: UIWebView!
-    //Webviewcontroller scheme calls
+    var JSAppName = "nil";
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         //hide status bar
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade);
     }
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-       
-        //test webview
-         let url = NSURL(string: "http://localhost:8080/nervous-jsapps/hello-world/app.html");
+    
+        //webview
+        let url = NSURL(string: "http://localhost:8080/nervous-jsapps/\(JSAppName)/app.html");
  
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
         JSAppWebView.scrollView.bounces = false;
-        
-        
+    
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -28,7 +28,7 @@
 		1FF696D21C25612F005CCF6E /* Swifter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1FF696AB1C25612F005CCF6E /* Swifter.podspec */; settings = {ASSET_TAGS = (); }; };
 		1FF696EA1C256582005CCF6E /* localServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF696E91C256582005CCF6E /* localServer.swift */; settings = {ASSET_TAGS = (); }; };
 		22657E8A1C2554FD0025B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E891C2554FD0025B1E0 /* AppDelegate.swift */; };
-		22657E8C1C2554FD0025B1E0 /* JSAppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */; };
+		22657E8C1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657E8B1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift */; };
 		22657E931C2554FD0025B1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22657E921C2554FD0025B1E0 /* Assets.xcassets */; };
 		22657E961C2554FD0025B1E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22657E941C2554FD0025B1E0 /* LaunchScreen.storyboard */; };
 		2273366F1C2573690028C5F0 /* JSAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273366D1C2572400028C5F0 /* JSAppViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -93,7 +93,7 @@
 		1FF696E91C256582005CCF6E /* localServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localServer.swift; sourceTree = "<group>"; };
 		22657E861C2554FD0025B1E0 /* NervousMagicApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NervousMagicApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22657E891C2554FD0025B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAppStoreViewController.swift; sourceTree = "<group>"; };
+		22657E8B1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAppStoreTableViewController.swift; sourceTree = "<group>"; };
 		22657E901C2554FD0025B1E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22657E921C2554FD0025B1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22657E951C2554FD0025B1E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 				22DF54FD1C259A0600AA5B52 /* nervous-jsapps */,
 				2273366D1C2572400028C5F0 /* JSAppViewController.swift */,
 				22657E891C2554FD0025B1E0 /* AppDelegate.swift */,
-				22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */,
+				22657E8B1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift */,
 				22657E8F1C2554FD0025B1E0 /* Main.storyboard */,
 				22657E921C2554FD0025B1E0 /* Assets.xcassets */,
 				22657E941C2554FD0025B1E0 /* LaunchScreen.storyboard */,
@@ -356,7 +356,7 @@
 				1FF696D11C25612F005CCF6E /* String+Misc.swift in Sources */,
 				1FF696CF1C25612F005CCF6E /* HttpServerIO.swift in Sources */,
 				1FF696C91C25612F005CCF6E /* HttpHandlers.swift in Sources */,
-				22657E8C1C2554FD0025B1E0 /* JSAppStoreViewController.swift in Sources */,
+				22657E8C1C2554FD0025B1E0 /* JSAppStoreTableViewController.swift in Sources */,
 				2273366F1C2573690028C5F0 /* JSAppViewController.swift in Sources */,
 				1FF696C71C25612F005CCF6E /* Const.swift in Sources */,
 			);
