@@ -28,8 +28,8 @@ class JSAppViewController: UIViewController {
         
        
         //test webview
-         let url = NSURL(string: "http://localhost:8080/nervous-jsapps/hello-world/app.html");
- 
+        let url = NSURL(string: "http://localhost:8080/nervous-jsapps/hello-world/app.html");
+        //let url = NSURL(string: "http://localhost:8080/nervous-api/gyr/getGyr");
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
         JSAppWebView.scrollView.bounces = false;

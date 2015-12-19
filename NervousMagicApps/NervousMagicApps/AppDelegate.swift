@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var server = HttpServer()
+    let manager = CMMotionManager()
     
+    var jsnsense: String = ""
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
         
         do {
             try self.server.start()
@@ -27,10 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //let jsonObject: String = "{" + "\"ID\"" + ":" + (NSString(format: "%d", 10) as String) + "," + "\"Class\"" + ":" + (NSString(format: "%d", 3) as String) + "}"
-        self.server["/json"] = { request in
-            let jsonObject: NSDictionary = [NSString(string: "foo"): NSNumber(int: 3), NSString(string: "bar"): NSString(string: "baz")]
-            return .OK(.Json(jsonObject))
-        }
+        //self.server["/json"] = { request in
+        //    let jsonObject: NSDictionary = [NSString(string: "foo"): NSNumber(int: 3), NSString(string: "bar"): NSString(string: "baz")]
+        //    return .OK(.Json(jsonObject))
+        //}
         
         
         let publicDir = NSBundle.mainBundle().resourcePath;
@@ -68,16 +72,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let resource = r.params["resource"];
             let method = r.params["method"];
             
-            // http://localhost/api/?anything=behind&here=vtest
-            //var queryParamsInfo = ""
-            //for (name, value) in r.queryParams {
-             //   queryParamsInfo += "\(name) : \(value)<br>"
-            //}
             
+            switch resource! {
+                case "acc":
+                    self.manager.accelerometerUpdateInterval = 0.005
+                    self.manager.startAccelerometerUpdates()
+                    if method! == "getAcc" {
+                        if self.manager.accelerometerAvailable {
+                            self.manager.startAccelerometerUpdatesToQueue(NSOperationQueue()) { (data: CMAccelerometerData?, error: NSError?) in
+                                guard data != nil else {
+                                    print("There was an error: \(error)")
+                                    return
+                                }
+                                let ax = "\"x\"" + ":" + (NSString(format: "%f", data!.acceleration.x) as String)
+                                let ay = "\"y\"" + ":" + (NSString(format: "%f", data!.acceleration.y) as String)
+                                let az = "\"z\"" + ":" + (NSString(format: "%f", data!.acceleration.z) as String)
+                                self.jsnsense = "{" + ax + "," + ay + "," + az + "}"
+                                //print(self.jsnsense)
+                                self.manager.stopAccelerometerUpdates()
+
+                            }
+                        }
+                        NSThread.sleepForTimeInterval(0.2)
+                    }
+                
+                case "gyr":
+                    self.manager.gyroUpdateInterval = 0.005
+                    self.manager.startGyroUpdates()
+                    if method! == "getGyr" {
+                        if self.manager.gyroAvailable {
+                            self.manager.startGyroUpdatesToQueue(NSOperationQueue()) { (data: CMGyroData?, error: NSError?) in
+                                guard data != nil else {
+                                    print("There was an error: \(error)")
+                                    return
+                                }
+                                let gx = "\"x\"" + ":" + (NSString(format: "%f", data!.rotationRate.x) as String)
+                                let gy = "\"y\"" + ":" + (NSString(format: "%f", data!.rotationRate.y) as String)
+                                let gz = "\"z\"" + ":" + (NSString(format: "%f", data!.rotationRate.z) as String)
+                                self.jsnsense = "{" + gx + "," + gy + "," + gz + "}"
+                                //print(self.jsnsense)
+                                self.manager.stopGyroUpdates()
+                                
+                            }
+                        }
+                        NSThread.sleepForTimeInterval(0.5)
+                }
+                
+                default:
+                    print("Wrong Resource")
+            }
             
-            
-            return .OK(.Html("<h3>hello:</h3>\(resource!)\(method!)"))
-            
+            print(self.jsnsense)
+            //return .OK(.Html("<h3>hello:</h3>\(resource!)\(method!)"))
+            return .OK(.Json(self.jsnsense))
+            //return .OK(.Html("<h3>hello:</h3>\(self.jsnsense)"))
+
         }
 
         
