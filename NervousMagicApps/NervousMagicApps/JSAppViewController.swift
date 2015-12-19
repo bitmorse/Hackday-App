@@ -28,7 +28,7 @@ class JSAppViewController: UIViewController {
         
         
         //test webview
-        let url = NSURL(string: "http://sid027.github.io/Hackday-App/hello-world/app.html");
+        let url = NSURL(string: "https://sid027.github.io/Hackday-App/hello-world/app.html");
         let request = NSURLRequest(URL: url!);
         JSAppWebView.loadRequest(request);
         
