@@ -90,7 +90,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 self.jsnsense = "{" + ax + "," + ay + "," + az + "}"
                                 //print(self.jsnsense)
                                 self.manager.stopAccelerometerUpdates()
-
                             }
                         }
                         NSThread.sleepForTimeInterval(0.2)
@@ -119,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 default:
-                    print("Wrong Resource")
+                    self.jsnsense = "{" + "\"version\"" + ":" + (NSString(format: "%d", 1) as String) + "}"
             }
             
             print(self.jsnsense)
