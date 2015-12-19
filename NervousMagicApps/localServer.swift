@@ -42,9 +42,6 @@ public func localServer(publicDir: String?) -> HttpServer {
             pathParamsInfo += "\(token.0) : \(token.1)<br>"
         }
         return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method:</h3>\(r.method)<h3>Headers:</h3>\(headersInfo)<h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>\(pathParamsInfo)"))
-       
-        
-        
         
         return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method: \(r.method)</h3><h3>Headers:</h3><h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>"))
     }
