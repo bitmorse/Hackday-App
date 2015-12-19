@@ -63,24 +63,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        self.server["/nervous-api"] = { r in
-            var headersInfo = ""
-            for (name, value) in r.headers {
-                headersInfo += "\(name) : \(value)<br>"
-            }
+        server.GET["/nervous-api/:resource/:method"] = {r in
+            
+            let resource = r.params["resource"];
+            let method = r.params["method"];
             
             // http://localhost/api/?anything=behind&here=vtest
-            var queryParamsInfo = ""
-            for (name, value) in r.queryParams {
-                queryParamsInfo += "\(name) : \(value)<br>"
-            }
+            //var queryParamsInfo = ""
+            //for (name, value) in r.queryParams {
+             //   queryParamsInfo += "\(name) : \(value)<br>"
+            //}
             
-            var pathParamsInfo = ""
-            for token in r.params {
-                pathParamsInfo += "\(token.0) : \(token.1)<br>"
-            }
             
-            return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method:</h3>\(r.method)<h3>Headers:</h3>\(headersInfo)<h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>\(pathParamsInfo)"))
+            
+            return .OK(.Html("<h3>hello:</h3>\(resource!)\(method!)"))
             
         }
 
