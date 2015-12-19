@@ -15,8 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var server = HttpServer()
     
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
         do {
             try self.server.start()
             print("Server Started Successfully!")
@@ -62,22 +64,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        server["/test/:param1/:param2"] = { r in
+        
+        self.server["/api"] = { r in
             var headersInfo = ""
             for (name, value) in r.headers {
                 headersInfo += "\(name) : \(value)<br>"
             }
+            
+            // http://localhost/api/?anything=behind&here=vtest
             var queryParamsInfo = ""
             for (name, value) in r.queryParams {
                 queryParamsInfo += "\(name) : \(value)<br>"
             }
+            
             var pathParamsInfo = ""
             for token in r.params {
                 pathParamsInfo += "\(token.0) : \(token.1)<br>"
             }
-            return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method: \(r.method)</h3><h3>Headers:</h3>\(headersInfo)<h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>\(pathParamsInfo)"))
+            
+            return .OK(.Html("<h3>Address: \(r.address)</h3><h3>Url:</h3> \(r.url)<h3>Method:</h3>\(r.method)<h3>Headers:</h3>\(headersInfo)<h3>Query:</h3>\(queryParamsInfo)<h3>Path params:</h3>\(pathParamsInfo)"))
+            
         }
 
+        
+        
         return true
     }
 
