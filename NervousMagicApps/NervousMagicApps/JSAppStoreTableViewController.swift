@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Foundation
 
 class JSAppStoreTableViewController: UITableViewController {
     
@@ -21,8 +22,19 @@ class JSAppStoreTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let arrayOfStrings: [String] = ["hello-world", "Hello World App", "Hello World App Hello World App Hello World App"]
-        TableData.append(arrayOfStrings)
+        
+        //get app listing json
+        let endpoint = NSURL(string: "https://raw.githubusercontent.com/sid027/Hackday-App/master/NervousMagicApps/NervousMagicApps/nervous-resources/nervousAppList.json")
+        let data = NSData(contentsOfURL: endpoint!)
+        let json = JSON(data: data!);
+        
+        //fill tableview controller
+        for (_,app) in json{
+            let arrayOfStrings: [String] = [app["app"]["name"].string!, app["app"]["name"].string!, app["app"]["description"].string!];
+            TableData.append(arrayOfStrings)
+        }
+        
+        
         self.tableView.reloadData()
     }
 
@@ -69,6 +81,9 @@ class JSAppStoreTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+ 
+    
 
 
 }
