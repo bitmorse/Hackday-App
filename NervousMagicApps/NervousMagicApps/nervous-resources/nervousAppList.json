@@ -1,5 +1,4 @@
-[
-  {
+{
     "name": "hello-world",
     "description": "showcases the nervous JS api and phone data access",
     "url": "https://github.com/sid027/Hackday-App/blob/master/hello-world.nervous?raw=true",
@@ -11,4 +10,3 @@
     "url": "http://example.com/404.zip",
     "author": "Sam Sulaimanov"
   }
-]
