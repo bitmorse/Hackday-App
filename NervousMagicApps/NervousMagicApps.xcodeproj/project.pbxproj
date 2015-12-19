@@ -33,6 +33,8 @@
 		22657E961C2554FD0025B1E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22657E941C2554FD0025B1E0 /* LaunchScreen.storyboard */; };
 		2273366F1C2573690028C5F0 /* JSAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273366D1C2572400028C5F0 /* JSAppViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		229A039E1C2574C5003602AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22657E8F1C2554FD0025B1E0 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		22DF54FE1C259A0600AA5B52 /* nervous-jsapps in Resources */ = {isa = PBXBuildFile; fileRef = 22DF54FD1C259A0600AA5B52 /* nervous-jsapps */; settings = {ASSET_TAGS = (); }; };
+		22DF55041C25A59700AA5B52 /* nervous-resources in Resources */ = {isa = PBXBuildFile; fileRef = 22DF55031C25A59700AA5B52 /* nervous-resources */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		22657E951C2554FD0025B1E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22657E971C2554FD0025B1E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2273366D1C2572400028C5F0 /* JSAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSAppViewController.swift; sourceTree = "<group>"; };
+		22DF54FD1C259A0600AA5B52 /* nervous-jsapps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nervous-jsapps"; sourceTree = "<group>"; };
+		22DF55031C25A59700AA5B52 /* nervous-resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nervous-resources"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 		22657E881C2554FD0025B1E0 /* NervousMagicApps */ = {
 			isa = PBXGroup;
 			children = (
+				22DF55031C25A59700AA5B52 /* nervous-resources */,
+				22DF54FD1C259A0600AA5B52 /* nervous-jsapps */,
 				2273366D1C2572400028C5F0 /* JSAppViewController.swift */,
 				22657E891C2554FD0025B1E0 /* AppDelegate.swift */,
 				22657E8B1C2554FD0025B1E0 /* JSAppStoreViewController.swift */,
@@ -321,7 +327,9 @@
 				1FF696C01C25612F005CCF6E /* .swiftlint.yml in Resources */,
 				1FF696BF1C25612F005CCF6E /* .gitignore in Resources */,
 				229A039E1C2574C5003602AF /* Main.storyboard in Resources */,
+				22DF54FE1C259A0600AA5B52 /* nervous-jsapps in Resources */,
 				22657E961C2554FD0025B1E0 /* LaunchScreen.storyboard in Resources */,
+				22DF55041C25A59700AA5B52 /* nervous-resources in Resources */,
 				22657E931C2554FD0025B1E0 /* Assets.xcassets in Resources */,
 				1FF696C61C25612F005CCF6E /* test.json in Resources */,
 				1FF696D21C25612F005CCF6E /* Swifter.podspec in Resources */,

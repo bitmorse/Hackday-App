@@ -29,6 +29,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let jsonObject: NSDictionary = [NSString(string: "foo"): NSNumber(int: 3), NSString(string: "bar"): NSString(string: "baz")]
             return .OK(.Json(jsonObject))
         }
+        let publicDir = NSBundle.mainBundle().resourcePath;
+
+        let fm = NSFileManager.defaultManager();
+        let p = fm.currentDirectoryPath;
+        print(p);
+        
+        
+        server.GET["/nervous-jsapps/:appname/:resource"] = { r in
+            let filename = r.params["resource"];
+            let appfilename = r.params["appname"];
+            
+            if let rootDir = publicDir, html = NSData(contentsOfFile:"\(rootDir)/nervous-jsapps/\(appfilename!)/\(filename!)") {
+                var array = [UInt8](count: html.length, repeatedValue: 0)
+                html.getBytes(&array, length: html.length)
+                
+                return HttpResponse.RAW(200, "OK", nil, array)
+            }
+        return .NotFound
+        }
+        
+        server.GET["/nervous-resources/:resource"] = { r in
+            let filename = r.params["resource"];
+            
+            if let rootDir = publicDir, html = NSData(contentsOfFile:"\(rootDir)/nervous-resources/\(filename!)") {
+                var array = [UInt8](count: html.length, repeatedValue: 0)
+                html.getBytes(&array, length: html.length)
+                
+                return HttpResponse.RAW(200, "OK", nil, array)
+            }
+            return .NotFound
+        }
+        
         
         server["/test/:param1/:param2"] = { r in
             var headersInfo = ""
