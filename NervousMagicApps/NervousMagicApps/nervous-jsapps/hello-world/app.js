@@ -3,23 +3,23 @@
 	
 
 
-	$('#my-output').append("hello world! <br/>this is the first nervous app<br/>");
+	$('#my-output').append("This is the first <b>Nervous JSApp</b>. Live data below is provided <b>natively</b> by the phone.<br/>");
 	//$('#my-output').append("using JS nervous api v" + api_version + '<hr/>');
-    $('#my-output').append("using JS nervous api v" + api_version + '<hr/>');
+    $('#my-output').append("NervousAPI JS Version " + api_version + "<br/>");
  	
  	$.when(Nervous.getHWAPIVersion()).done(function(data){
-    	$('#my-output').append("and local analytics engine api v " +data.version+" <hr/>");
+    	$('#my-output').append("Local Analytics Engine Version " +data.version+"");
 	});
 
 
 
  	setInterval(function(){
 		$.when(Nervous.getGyr()).done(function(data){
-	    	$('#gyrodataX').html("gyr X:" +data.x);
-	    	$('#gyrodataY').html("gyr Y:" +data.x);
-	    	$('#gyrodataZ').html("gyr Z:" +data.x);
+	    	$('#gyrodataX').html("gyr X: " +data.x);
+	    	$('#gyrodataY').html("gyr Y: " +data.x);
+	    	$('#gyrodataZ').html("gyr Z: " +data.x);
 		});
- 	 }, 1000);
+ 	 }, 100);
 
 
 

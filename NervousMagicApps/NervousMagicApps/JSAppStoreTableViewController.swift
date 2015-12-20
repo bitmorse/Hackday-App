@@ -13,10 +13,7 @@ import Foundation
 
 class JSAppStoreTableViewController: UITableViewController {
     
-    //http://api.jsoneditoronline.org/v1/docs/14d584687bb4024c6413b967d7c78297
- 
     var TableData = Array<Array<String>>()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +21,13 @@ class JSAppStoreTableViewController: UITableViewController {
         
         
         //get app listing json
-        let endpoint = NSURL(string: "https://raw.githubusercontent.com/sid027/Hackday-App/master/NervousMagicApps/NervousMagicApps/nervous-resources/nervousAppList.json")
+        let endpoint = NSURL(string: "http://localhost:8080/nervous-resources/nervousAppList.json")
         let data = NSData(contentsOfURL: endpoint!)
         let json = JSON(data: data!);
         
         //fill tableview controller
         for (_,app) in json{
-            let arrayOfStrings: [String] = [app["app"]["name"].string!, app["app"]["name"].string!, app["app"]["description"].string!];
+            let arrayOfStrings: [String] = [app["app"]["name"].string!, app["app"]["title"].string!, app["app"]["description"].string!];
             TableData.append(arrayOfStrings)
         }
         
@@ -48,7 +45,14 @@ class JSAppStoreTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("appstoreCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = TableData[indexPath.row][0]
+        
+        //get labels within the cell
+        var lbl : UILabel? = cell.contentView.viewWithTag(1) as? UILabel
+        lbl?.text = TableData[indexPath.row][1];
+        
+        var txtv : UITextView? = cell.contentView.viewWithTag(2) as? UITextView
+        txtv?.text = TableData[indexPath.row][2];
+        
         return cell
     }
     
@@ -57,7 +61,6 @@ class JSAppStoreTableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        print("Row: \(TableData[row][0])")
 
         performSegueWithIdentifier("JSAppSegue", sender: TableData[row][0])
     }
